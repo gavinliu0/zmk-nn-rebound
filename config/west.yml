@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: PippinW
-      url-base: https://github.com/PippinW
+    - name: gavinliu0
+      url-base: https://github.com/gavinliu0
   projects:
     - name: zmk
-      remote: PippinW
+      remote: gavinliu0
       revision: default_rebound
       import: app/west.yml
   self:
