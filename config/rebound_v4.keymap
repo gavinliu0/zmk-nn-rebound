@@ -22,15 +22,15 @@
         default_layer {                      					  
                 bindings = <
                         // ------------------------------------------------------------------------------------------------------
-                        // | TAB     |  Q  |  W  |  E  |  R   |  T  |                  |  Y  |  U   |  I  |  O   |  P   | BCK   |
-                        // | CTL/DEL |  A  |  S  |  D  |  F   |  G  |-----|   `  |-----|  H  |  J   |  K  |  L   |  :   |  '    |
-                        // | SFT/(   |  Z  |  X  |  C  |  V   |  B  |-----|   `  |-----|  N  |  M   |  ,  |  .   |  /   | SFT/) |
-                        // | ALT     | GUI |     |     | _SYM | ENT |-----| _NAV |-----| SPC | _SYM |     |      |      | GUI   |
+                        // | TAB     |  Q  |  W  |  E   |  R  |  T  |                  |  Y  |  U   |  I   |  O   |  P   | BCK   |
+                        // | CTL/DEL |  A  |  S  |  D   |  F  |  G  |-----|   `  |-----|  H  |  J   |  K   |  L   |  :   |  '    |
+                        // | SFT/(   |  Z  |  X  |  C   |  V  |  B  |-----|   `  |-----|  N  |  M   |  ,   |  .   |  /   | SFT/) |
+                        // | ALT     | GUI |     | _NUM |     | ENT |-----| _NAV |-----| SPC |      | _SYM |      |      | GUI   |
                         // ------------------------------------------------------------------------------------------------------
-                        &kp TAB         &kp Q     &kp W  &kp E  &kp R     &kp T                      &kp Y      &kp U     &kp I      &kp O    &kp P      &kp BACKSPACE
-                        &mt LCTRL DEL   &kp A     &kp S  &kp D  &kp F     &kp G         &kp GRAVE    &kp H      &kp J     &kp K      &kp L    &kp SEMI   &kp APOSTROPHE
-                        &mt LSHFT LPAR  &kp Z     &kp X  &kp C  &kp V     &kp B         &kp GRAVE    &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH   &mt LSHFT RPAR  
-                        &kp LALT        &kp LGUI  &none  &none  &mo _NUM  &kp ENTER     &mo _NAV     &kp SPACE  &mo _SYM  &none      &none    &mo __FN   &kp RGUI   
+                        &kp TAB         &kp Q     &kp W  &kp E    &kp R     &kp T                      &kp Y      &kp U     &kp I      &kp O    &kp P      &kp BACKSPACE
+                        &mt LCTRL DEL   &kp A     &kp S  &kp D    &kp F     &kp G         &kp GRAVE    &kp H      &kp J     &kp K      &kp L    &kp SEMI   &kp APOSTROPHE
+                        &mt LSHFT LPAR  &kp Z     &kp X  &kp C    &kp V     &kp B         &kp GRAVE    &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH   &mt LSHFT RPAR  
+                        &kp LALT        &kp LGUI  &none  &mo _NUM &none    &kp ENTER     &mo _NAV     &kp SPACE   &none     &mo _SYM   &none    &mo __FN   &kp RGUI   
                 >;
         };
 
