@@ -21,12 +21,20 @@
         compatible = "zmk,keymap";
         default_layer {                      					  
                 bindings = <
-                        // ----------------------------------------------------------------------------------------------------------
-                        // | TAB     |  Q  |  W  |  E   |  R  |     T    |                |  Y  |  U   |  I   |  O   |  P   | BCK   |
-                        // | CTL/DEL |  A  |  S  |  D   |  F  |     G    |-----| `  |-----|  H  |  J   |  K   |  L   |  :   |  '    |
-                        // | SFT/(   |  Z  |  X  |  C   |  V  |     B    |-----| F5 |-----|  N  |  M   |  ,   |  .   |  /   | SFT/) |
-                        // | ALT     | GUI |     | _NUM |     | _NAV ENT |-----| F8 |-----| SPC |      | _SYM |      |      | GUI   |
-                        // ----------------------------------------------------------------------------------------------------------
+                        // -------------------------------------------------------------------------------------------------------------
+                        // -----------------------------------------------                -------  -------  -------  -------  ------   ------  |
+                        // | TAB     |  Q  |  W  |  E   |  R  |     T    |                |  Y  | |  U   | |  I   | |  O   | |  P   | |BCK   | |
+                        // -----------------------------------------------                -------  ------- |------- |------- |-------  ------  |
+                        // -----------------------------------------------                -------  ------- |------- |------- |-------  ------  |
+                        // | CTL/DEL |  A  |  S  |  D   |  F  |     G    |-----| `  |-----|  H  | |  J   | |  K   | |  L   | |  :   | | '    | |
+                        // -----------------------------------------------                -------  ------- |------- |------- |-------  ------  |
+                        // -----------------------------------------------                ------- |------- |------- |------- |-------  ------  |
+                        // | SFT/(   |  Z  |  X  |  C   |  V  |     B    |-----| F5 |-----|  N  | |  M   | |  ,   | |  .   | |  /   | |SFT/) | |
+                        // -----------------------------------------------                ------- |------- |------- |------- |-------  ------  |
+                        // -----------------------------------------------                ------- |------- |------- |------- |-------  ------  |
+                        // | ALT     | GUI |     | _NUM |     | _NAV ENT |-----| F8 |-----| SPC | |      | | _SYM | |      | |      | |GUI   | |
+                        // -----------------------------------------------                ------- |------- |------- |------- |-------  ------  |
+                        // -------------------------------------------------------------------------------------------------------------
                         &kp TAB         &kp Q     &kp W  &kp E    &kp R     &kp T                           &kp Y      &kp U     &kp I      &kp O    &kp P      &kp BACKSPACE
                         &mt LCTRL DEL   &kp A     &kp S  &kp D    &kp F     &kp G              &kp GRAVE    &kp H      &kp J     &kp K      &kp L    &kp SEMI   &kp APOSTROPHE
                         &mt LSHFT LPAR  &kp Z     &kp X  &kp C    &kp V     &kp B              &kp F5       &kp N      &kp M     &kp COMMA  &kp DOT  &kp FSLH   &mt LSHFT RPAR  
@@ -40,12 +48,12 @@
                         // | ESC/` |  1  |  2  |  3  |  4  |  5  |                 |  6  |  7  |  8  |  9  |  0  |  T^ |
                         // | BCK   |  -  |  +  |  [  |  ]  |  |  |-----|     |-----|     |  4  |  5  |  6  |     |     |
                         // |       |     |     |     |     |     |-----|     |-----|     |  1  |  2  |  3  |  \  |     |
-                        // |       |     |     |     |     |     |-----|     |-----|     |  0  |     |     |     |     |
+                        // |       |     |     |     |     |     |-----|     |-----| T^  |     |     |     |     |     |
                         // ---------------------------------------------------------------------------------------------
                         &gresc          &kp N1      &kp N2     &kp N3     &kp N4     &kp N5               &kp N6   &kp N7   &kp N8   &kp N9   &kp N0    &trans
                         &kp BACKSPACE   &kp MINUS   &kp PLUS   &kp LBKT   &kp RBKT   &kp PIPE    &none    &none    &kp N4   &kp N5   &kp N6   &none     &none
                         &none           &none       &none      &none      &none      &none       &none    &none    &kp N1   &kp N2   &kp N3   &kp BSLH  &none      
-                        &none           &none       &none      &none      &none      &none       &none    &none    &kp N0   &none    &none    &none     &none          
+                        &none           &none       &none      &none      &none      &none       &none    &trans    none     &none    &none    &none     &none          
                 >;
         };
 
@@ -55,27 +63,27 @@
                         // | ~   |  !  |  @  |  #  |  $  |  %  |                  |  ^  |  &  |  *  |  (  |  )  |  T^ |
                         // | BCK |  _  |  =  |  {  |  }  |  |  |-----|      |-----|     |     |     |     |     |     |
                         // |     |     |     |  (  |  )  |     |-----|      |-----|     |     |     |     |     |     |
-                        // |     |     |     |     |     |     |-----|      |-----|     |     |     |     |     |     |
+                        // |     |     |     |     |     |     |-----|      |-----| T^  |     |     |     |     |     |
                         // --------------------------------------------------------------------------------------------
                         &kp TILDE       &kp EXCL    &kp AT      &kp HASH   &kp DLLR   &kp PRCNT               &kp CARET   &kp AMPS   &kp STAR   &kp LPAR   &kp RPAR   &trans
                         &kp BACKSPACE   &kp UNDER   &kp EQUAL   &kp LBRC   &kp RBRC   &kp PIPE       &none    &none       &none      &none      &none      &none      &none
-                        &none           &none       &none       &kp LPAR   &kp RPAR      &none          &none    &none       &none      &none      &none      &none      &none      
-                        &none           &none       &none       &none      &none      &none          &none    &none       &none      &none      &none      &none      &none          
+                        &none           &none       &none       &kp LPAR   &kp RPAR   &none          &none    &none       &none      &none      &none      &none      &none      
+                        &none           &none       &none       &none      &none      &none          &none    &trans       &none      &none      &none      &none      &none          
                 >;
         };
 
         navigation_layer {
 		bindings = < 
                         // -------------------------------------------------------------------------------------------------
-                        // |     |     |     |     |     |     |                 |      | PG_UP | UP   |       |     |     |
+                        // |     |     |     |     |     |     |                 |      | PG_UP | UP   |       |     |  T^ |
                         // |     |     |     |     |     |     |-----|     |-----| HOME | LEFT  | DOWN | RIGHT | END |     |
                         // |     |     |     |     |     |     |-----|     |-----|      | PG_DN |      |       |     |     |
-                        // |     |     |     |     |     |     |-----|     |-----|      |       |      |       |     |     |
+                        // |     |     |     |     |     |     |-----|     |-----| T^   |       |      |       |     |     |
                         // -------------------------------------------------------------------------------------------------
-                        &none   &none   &none   &none   &none   &none            &none      &kp PG_UP   &kp UP     &none       &none     &none
-                        &none   &none   &none   &none   &none   &none   &none    &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
-                        &none   &none   &none   &none   &none   &none   &none    &none      &kp PG_DN   &none      &none       &none     &none
-                        &none   &none   &none   &none   &none   &none   &none    &none      &none       &none      &none       &none     &none
+                        &none   &none   &none   &none   &none   &none             &none      &kp PG_UP   &kp UP     &none       &none     &trans
+                        &none   &none   &none   &none   &none   &none    &none    &kp HOME   &kp LEFT    &kp DOWN   &kp RIGHT   &kp END   &none
+                        &none   &none   &none   &none   &none   &none    &none    &none      &kp PG_DN   &none      &none       &none     &none
+                        &none   &none   &none   &none   &none   &none    &none    &trans      &none       &none      &none       &none     &none
                 >;
         };
 
@@ -90,7 +98,7 @@
                         &kp F12   &kp F1         &kp F2   &kp F3   &kp F4   &kp F5           &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &kp F11 
                         &none     &none          &none    &none    &none    &none    &none   &none    &none    &none    &none    &none     &none
                         &none     &none          &none    &none    &none    &none    &none   &none    &none    &none    &none    &none     &none
-                        &reset    &bootloader    &none    &none    &none    &none    &none   &none    &none    &none    &none    &none     &none
+                        &reset    &jbootloader    &none    &none    &none    &none    &none   &none    &none    &none    &none    &none     &none
                 >;
         };
     };
